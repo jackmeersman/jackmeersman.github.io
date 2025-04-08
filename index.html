@@ -1,12 +1,737 @@
-<h1>John Meersman</h1>
-<h3>University of Georgia, Class of 2019</h3>
-<h3>B.S. in Computer Science</h3>
-<h3>B.S. in Biochemistry &amp; Molecular Biology</h3>
-<h3>UGA Society for Cyber Security, President</h3>
-<img src="https://drive.google.com/open?id=1BUVrw56XU0X-plauGYQzwZ1yAmJXWjTv">
-<p>John Meersman is a well-rounded and engaging entry-level professional in the field of information security and digital forensics. His career began in 2017 at TrustPoint Solutions, where he developed a solid foundation in information security risk assessments, policy and procedure development, compliance, and security technology implementation. As a product of multiple internship experiences during his undergraduate career, he also maintains a proficient understanding of database management, data visualization, and Big Data analysis using Qlik, Apache Hadoop, and other platforms.</p>
-<h3>Links:</h3>
-<p><a title="John Thomas - Resume" href="https://drive.google.com/file/d/1zWeA9un8css5iLBrqqWSoaqN84vEylfG/view?usp=sharing" target="_blank" rel="noopener">My Resume</a></p>
-<p><a title="John Meersman - Research" href="https://github.com/jackmeersman/ComputationalBiologyResearch" target="_blank" rel="noopener">My Research (UGA Computational Systems Biology Lab)</a></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Meersman - Cybersecurity Professional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0066cc;
+            --text-color: #555555;
+            --light-text: #333333;
+            --background: #ffffff;
+            --card-bg: #f5f7fa;
+            --border-color: #e1e5e9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background-color: var(--background);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: calc(100vh - 90px);
+        }
+        
+        .hero-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .hero-image {
+            flex: 0 0 250px;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-content {
+            flex: 1;
+        }
+        
+        .hero h1 {
+            font-size: 60px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero h2 {
+            font-size: 36px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            margin-right: 15px;
+        }
+        
+        .btn:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
+        }
+        
+        .btn-outline:hover {
+            background: rgba(0, 102, 204, 0.1);
+            color: var(--secondary-color);
+        }
+        
+        .section-title {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 2px;
+            background-color: var(--secondary-color);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        /* Section divider */
+        .section-divider {
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 0 auto 20px;
+            max-width: 1160px;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        
+        .about-text {
+            flex: 0 0 60%;
+        }
+        
+        .about-stats {
+            flex: 0 0 35%;
+        }
+        
+        .stats-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+            border: 1px solid var(--border-color);
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stats-card h3 {
+            color: var(--primary-color);
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .stat-icon {
+            background-color: rgba(0, 102, 204, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .stat-icon i {
+            color: var(--secondary-color);
+            font-size: 18px;
+        }
+        
+        .stat-info h4 {
+            color: var(--primary-color);
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .education-item, .experience-item {
+            margin-bottom: 40px;
+        }
+        
+        .education-item h3, .experience-item h3 {
+            color: var(--light-text);
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        
+        .education-item p, .experience-item p {
+            margin-bottom: 10px;
+        }
+        
+        .date {
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .certification-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.3s;
+            border: 1px solid var(--border-color);
+        }
+        
+        .certification-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .certification-card h3 {
+            color: var(--primary-color);
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .certification-card p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .certification-badge {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        
+        .skills-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .skill-category {
+            flex: 1 1 300px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            font-weight: 600;
+        }
+        
+        .skill-category h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-color);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .skill-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+        
+        /* Responsive styles for experience timeline */
+        @media (max-width: 768px) {
+            .role-progression {
+                margin-left: 15px;
+                padding-left: 15px;
+            }
+            
+            .role-item::before {
+                left: -25px;
+            }
+            
+            .role-item:first-child::after {
+                left: -18px;
+            }
+            
+            .company-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .company-icon {
+                margin-bottom: 15px;
+            }
+        }
+        
+        footer {
+            background-color: var(--card-bg);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .social-links {
+            margin-bottom: 30px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(0, 102, 204, 0.1);
+            color: var(--secondary-color);
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .copyright {
+            font-size: 14px;
+        }
+        
+        /* Progress Bar for KPIs */
+        .progress-wrapper {
+            margin-bottom: 20px;
+        }
+        
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .progress-label span {
+            color: var(--light-text);
+            font-size: 16px;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: var(--secondary-color);
+            border-radius: 4px;
+            position: relative;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .hero h2 {
+                font-size: 30px;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-text, .about-stats {
+                flex: 0 0 100%;
+            }
+            
+            .about-stats {
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Jack<span>Meersman</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-image">
+                    <img src="/api/placeholder/250/250" alt="Jack Meersman" />
+                </div>
+                <div class="hero-content">
+                    <h1>Jack Meersman</h1>
+                    <h2>Cybersecurity Professional</h2>
+                    <p>Incident Response Manager and Cyber Risk Specialist with expertise in digital forensics, security compliance, and proactive cyber resilience.</p>
+                    <a href="#contact" class="btn">Get In Touch</a>
+                    <a href="#experience" class="btn btn-outline">View Experience</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a cybersecurity professional specializing in digital forensics and incident response (DFIR), with significant experience in both reactive incident handling and proactive security improvement projects.</p>
+                    <p>Currently serving as a Manager at Alvarez & Marsal's Global Cyber Risk and Incident Response Services, I lead security incident investigations while also helping clients strengthen their security posture through various initiatives including cyber incident response planning, tabletop exercises, and purple team assessments.</p>
+                    <p>With a background spanning multiple industries, including healthcare, financial services, entertainment, and manufacturing, I bring a diverse perspective to solving complex security challenges. My technical expertise is complemented by a strong understanding of security compliance frameworks including PCI DSS, ISO 27001, HITRUST, NIST CSF, and FedRAMP.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stats-card">
+                        <h3>Career Highlights</h3>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h4>6+ Years</h4>
+                                <p>Professional Experience</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h4>100+</h4>
+                                <p>Security Incidents Managed</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h4>10+</h4>
+                                <p>Professional Certifications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="section-divider"></div>
+
+<li>Implemented GitHub Advanced Security features and 50+ GitHub Actions across 80+ proprietary application stacks</li>
+                    <li>Developed OT/ICS incident response processes for a European cruise line</li>
+                    <li>Conducted PCI DSS gap assessments and program transformation consulting for international clients</li>
+                    <li>Advised healthcare non-profits on data security, privacy, and HIPAA compliance throughout cloud migrations</li>
+                    <li>Developed comprehensive cybersecurity policies aligned with compliance frameworks</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Associate, Cyber Security Services</h3>
+                <span class="date">KPMG US (July 2019 - October 2021)</span>
+                <p>Built foundational skills in cybersecurity consulting and incident response while supporting senior team members.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-container">
+                <div class="education-logo">
+                    <img src="/api/placeholder/80/80" alt="University of Georgia Logo">
+                </div>
+                <div class="education-details">
+                    <h3>University of Georgia</h3>
+                    <span class="date">Graduated 2019</span>
+                    <p>B.S. Computer Science</p>
+                    <p>B.S. Biochemistry & Molecular Biology</p>
+                    <p>Area of Emphasis: Cyber Security and Distributed Systems</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <img src="/api/placeholder/80/80" alt="CISSP Logo" class="certification-badge">
+                    <h3>CISSP</h3>
+                    <p>Certified Information Systems Security Professional</p>
+                </div>
+                <div class="certification-card">
+                    <img src="/api/placeholder/80/80" alt="GIAC Logo" class="certification-badge">
+                    <h3>GSP</h3>
+                    <p>GIAC Security Professional</p>
+                </div>
+                <div class="certification-card">
+                    <img src="/api/placeholder/80/80" alt="GIAC Logo" class="certification-badge">
+                    <h3>GCFA</h3>
+                    <p>GIAC Certified Forensic Analyst</p>
+                </div>
+                <div class="certification-card">
+                    <img src="/api/placeholder/80/80" alt="GIAC Logo" class="certification-badge">
+                    <h3>GX-FA</h3>
+                    <p>GIAC Experienced Forensic Analyst</p>
+                </div>
+                <div class="certification-card">
+                    <img src="/api/placeholder/80/80" alt="GIAC Logo" class="certification-badge">
+                    <h3>GCFE</h3>
+                    <p>GIAC Certified Forensic Examiner</p>
+                </div>
+                <div class="certification-card">
+                    <img src="/api/placeholder/80/80" alt="GIAC Logo" class="certification-badge">
+                    <h3>GX-FE</h3>
+                    <p>GIAC Experienced Forensic Examiner</p>
+                </div>
+                <div class="certification-card">
+                    <img src="/api/placeholder/80/80" alt="GIAC Logo" class="certification-badge">
+                    <h3>GRID</h3>
+                    <p>GIAC Response and Industrial Defense</p>
+                </div>
+                <div class="certification-card">
+                    <img src="/api/placeholder/80/80" alt="AWS Logo" class="certification-badge">
+                    <h3>AWS Security Specialty</h3>
+                    <p>Amazon Web Services Security Specialty Certification</p>
+                </div>
+                <div class="certification-card">
+                    <img src="/api/placeholder/80/80" alt="GCP Logo" class="certification-badge">
+                    <h3>GCP Associate Cloud Engineer</h3>
+                    <p>Google Cloud Platform Associate Cloud Engineer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="section-divider"></div>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h3>Incident Response</h3>
+                    <ul class="skill-list">
+                        <li>Digital Forensics</li>
+                        <li>Malware Analysis</li>
+                        <li>Threat Hunting</li>
+                        <li>Root Cause Analysis</li>
+                        <li>Evidence Collection & Preservation</li>
+                        <li>Incident Documentation</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Compliance & Frameworks</h3>
+                    <ul class="skill-list">
+                        <li>PCI DSS</li>
+                        <li>ISO 27001</li>
+                        <li>HITRUST</li>
+                        <li>NIST CSF</li>
+                        <li>FedRAMP</li>
+                        <li>IEC 62443</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud Security</h3>
+                    <ul class="skill-list">
+                        <li>AWS Security Services</li>
+                        <li>GCP Security Controls</li>
+                        <li>Cloud Architecture Review</li>
+                        <li>Identity Access Management</li>
+                        <li>Cloud Security Posture Management</li>
+                        <li>Cloud Incident Response</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>OT/ICS Security</h3>
+                    <ul class="skill-list">
+                        <li>Industrial Network Segmentation</li>
+                        <li>OT Asset Inventory</li>
+                        <li>SCADA Security</li>
+                        <li>OT Incident Response</li>
+                        <li>ICS Security Assessments</li>
+                        <li>OT Security Monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/jackmeersman" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:jackmeersman@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">© 2025 Jack Meersman. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
