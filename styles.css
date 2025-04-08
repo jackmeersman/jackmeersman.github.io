@@ -267,28 +267,38 @@ section {
     flex: 1;
 }
 
+.experience-intro {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    color: var(--text-color);
+}
+
 .company-experience {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     position: relative;
+    padding-bottom: 20px;
 }
 
 .company-header {
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .company-icon {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 8px;
     background-color: var(--card-bg);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
+    margin-right: 25px;
     border: 1px solid var(--border-color);
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .company-icon img {
@@ -298,26 +308,27 @@ section {
 
 .company-info h3 {
     color: var(--primary-color);
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 5px;
     font-weight: 600;
 }
 
 .company-info p {
     color: var(--secondary-color);
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .role-progression {
     position: relative;
-    margin-left: 30px;
+    margin-left: 35px;
     padding-left: 30px;
     border-left: 2px solid var(--border-color);
 }
 
 .role-item {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     padding-right: 15px;
 }
 
@@ -328,13 +339,13 @@ section {
 .role-item::before {
     content: '';
     position: absolute;
-    left: -40px;
+    left: -41px;
     top: 10px;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: var(--secondary-color);
-    border: 3px solid white;
+    border: 4px solid white;
     box-shadow: 0 0 0 1px var(--border-color);
     z-index: 1;
 }
@@ -343,16 +354,16 @@ section {
     content: '';
     position: absolute;
     left: -33px;
-    top: -30px;
+    top: -35px;
     width: 2px;
-    height: 30px;
+    height: 35px;
     background-color: white;
     z-index: 0;
 }
 
 .education-item h3, .role-item h3 {
     color: var(--primary-color);
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 5px;
     font-weight: 600;
 }
@@ -364,8 +375,24 @@ section {
 .date {
     color: var(--secondary-color);
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     display: block;
+    font-size: 16px;
+}
+
+.role-achievements {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.role-achievements li {
+    margin-bottom: 8px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.experience-stats {
+    margin-top: 60px;
 }
 
 .certifications-grid {
@@ -526,16 +553,18 @@ footer {
     }
     
     .role-progression {
-        margin-left: 15px;
-        padding-left: 15px;
+        margin-left: 20px;
+        padding-left: 20px;
     }
     
     .role-item::before {
-        left: -25px;
+        left: -30px;
+        width: 16px;
+        height: 16px;
     }
     
     .role-item:first-child::after {
-        left: -18px;
+        left: -23px;
     }
     
     .company-header {
