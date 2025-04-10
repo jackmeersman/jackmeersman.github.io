@@ -124,36 +124,6 @@ section {
     margin-bottom: 30px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background: var(--secondary-color);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s;
-    margin-right: 15px;
-}
-
-.btn:hover {
-    background: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.btn-outline {
-    background: transparent;
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-}
-
-.btn-outline:hover {
-    background: rgba(0, 102, 204, 0.1);
-    color: var(--secondary-color);
-}
-
 .section-title {
     font-size: 32px;
     color: var(--primary-color);
@@ -532,18 +502,6 @@ footer {
     
     .hero h2 {
         font-size: 30px;
-    }
-    
-    .about-content {
-        flex-direction: column;
-    }
-    
-    .about-text, .about-stats {
-        flex: 0 0 100%;
-    }
-    
-    .about-stats {
-        margin-top: 40px;
     }
     
     .role-progression {
