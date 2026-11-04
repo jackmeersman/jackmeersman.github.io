@@ -51,7 +51,7 @@
     if (root.classList.contains("menu-open") && !e.target.closest(".site-header")) setMenu(false);
   });
 
-  window.matchMedia("(min-width: 800px)").addEventListener("change", (e) => {
+  window.matchMedia("(min-width: 1000px)").addEventListener("change", (e) => {
     if (e.matches) setMenu(false);
   });
 

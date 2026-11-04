@@ -324,7 +324,7 @@ p {
   display: block;
 }
 
-@media (max-width: 799.98px) {
+@media (max-width: 999.98px) {
   .menu-btn {
     display: inline-grid;
   }
@@ -940,3 +940,10 @@ p {
     color: var(--fg-3);
   }
 }
+
+/* Project case studies, training, and community entries. */
+.narrative h3 { font-size: 20px; line-height: 1.4; letter-spacing: -0.02em; }
+.narrative h4 { font-size: 15px; margin-top: 20px; }
+.narrative p:not(.eyebrow):not(.role-dates) { color: var(--fg-2); font-size: 15px; line-height: 1.65; margin-top: 10px; }
+.narrative .eyebrow { margin-bottom: 8px; }
+.cert-name:hover { text-decoration: underline; }

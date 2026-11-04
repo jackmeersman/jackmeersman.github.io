@@ -8,7 +8,7 @@ Static HTML, CSS, and a small amount of vanilla JavaScript. There is no build st
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | The whole site, one page, five numbered sections |
+| `index.html` | The whole site, one page, eight numbered sections |
 | `styles.css` | Design tokens, layout, light and dark themes, print styles |
 | `script.js` | Theme toggle, mobile menu, footer year |
 | `404.html` | Not-found page, picked up automatically by GitHub Pages |
@@ -23,7 +23,7 @@ Colors live in CSS custom properties at the top of `styles.css`. Dark mode follo
 
 ## Editing content
 
-Everything is in `index.html`. Sections are numbered `01` through `05` and each has a sticky header on desktop. To add a role, certification, or skill, copy the neighboring block.
+Everything is in `index.html`. Sections are numbered `01` through `08` and each has a sticky header on desktop. To add a role, certification, or skill, copy the neighboring block.
 
 ## Local preview
 
