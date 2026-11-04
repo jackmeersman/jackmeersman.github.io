@@ -544,3 +544,122 @@ footer {
         margin-bottom: 20px;
     }
 }
+/* Resume projects and community content share the existing card treatment. */
+[id] {
+    scroll-margin-top: 110px;
+}
+
+.projects-grid, .community-grid, .learning-grid {
+    display: grid;
+    gap: 25px;
+}
+
+.projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.community-grid, .learning-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-card, .community-card, .learning-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.project-card h3, .community-card h3, .learning-card h4, .subsection-title {
+    color: var(--primary-color);
+}
+
+.project-card h3 {
+    font-size: 24px;
+    line-height: 1.35;
+    margin-bottom: 20px;
+}
+
+.project-role {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.project-card h4 {
+    color: var(--primary-color);
+    margin: 20px 0 6px;
+}
+
+.community-card p + p {
+    margin-top: 12px;
+}
+
+.subsection-title {
+    font-size: 24px;
+    margin: 40px 0 20px;
+}
+
+.certification-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.certification-card p {
+    color: var(--secondary-color);
+    margin-bottom: 0;
+}
+
+.hero .hero-location {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 22px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+.header-content {
+    gap: 20px;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 5px;
+}
+
+@media (max-width: 768px) {
+    [id] {
+        scroll-margin-top: 180px;
+    }
+
+    .projects-grid, .community-grid, .learning-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-image {
+        flex: 0 1 auto;
+        width: min(250px, 100%);
+        margin-bottom: 0;
+    }
+
+    .education-logo {
+        flex: 0 1 auto;
+        width: min(350px, 100%);
+        margin-right: 0;
+    }
+
+    .certifications-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 10vw, 40px);
+    }
+}

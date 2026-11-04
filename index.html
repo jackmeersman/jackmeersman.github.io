@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jack Meersman - Cybersecurity Professional</title>
+        <title>Jack Meersman | Cyber Incident Response &amp; Digital Forensics</title>
+        <meta name="description" content="Jack Meersman is a cyber incident detection, response, and investigations expert building cloud DFIR platforms, forensic automation, and Microsoft 365 assessment tools.">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="styles.css">
     </head>
@@ -12,49 +13,65 @@
             <div class="container">
                 <div class="header-content">
                     <div class="logo">Jack <span>Meersman</span></div>
-                    <nav>
+                    <nav aria-label="Main navigation">
                         <ul>
-                            <li><a href="#experience">Professional Experience</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#projects">Projects</a></li>
                             <li><a href="#education">Education</a></li>
                             <li><a href="#certifications">Certifications</a></li>
-                            <li><a href="#technical-skills">Technical Skills</a></li>
+                            <li><a href="#technical-skills">Skills</a></li>
+                            <li><a href="#community">Community</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
 
-        <div id="title"></div>
-        <div id="experience"></div>
-        <div id="education"></div>
-        <div id="certifications"></div>
-        <div id="technical-skills"></div>
+        <main>
+            <div id="title"></div>
+            <div id="experience"></div>
+            <div id="projects"></div>
+            <div id="education"></div>
+            <div id="certifications"></div>
+            <div id="technical-skills"></div>
+            <div id="community"></div>
+        </main>
 
         <script>
             async function loadHTML(elementId, filePath) {
-                const response = await fetch(filePath);
-                if (!response.ok) {
-                    document.getElementById(elementId).innerHTML = 'Error loading content.';
-                    return;
+                const element = document.getElementById(elementId);
+                try {
+                    const response = await fetch(filePath);
+                    if (!response.ok) throw new Error(`Unable to load ${filePath}`);
+                    element.innerHTML = await response.text();
+                } catch (error) {
+                    element.textContent = 'Content could not be loaded. Please refresh the page.';
+                    console.error(error);
                 }
-                const content = await response.text();
-                document.getElementById(elementId).innerHTML = content;
             }
-            loadHTML('title', 'title.html');
-            loadHTML('experience', 'experience.html');
-            loadHTML('education', 'education.html');
-            loadHTML('certifications', 'certifications.html');
-            loadHTML('technical-skills', 'technical-skills.html');
+            Promise.all([
+                loadHTML('title', 'title.html'),
+                loadHTML('experience', 'experience.html'),
+                loadHTML('projects', 'projects.html'),
+                loadHTML('education', 'education.html'),
+                loadHTML('certifications', 'certifications.html'),
+                loadHTML('technical-skills', 'technical-skills.html'),
+                loadHTML('community', 'community.html')
+            ]).then(() => {
+                // Restore direct section links after the content has loaded.
+                const target = document.getElementById(window.location.hash.slice(1));
+                if (target) target.scrollIntoView();
+            });
         </script>
     
         <footer id="contact">
             <div class="container">
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/jackmeersman/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/jackmeersman" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:jackmeersman@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/jackmeersman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/jackmeersman" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:jackmeersman@gmail.com" aria-label="Email Jack Meersman"><i class="fas fa-envelope"></i></a>
                 </div>
-                <p class="copyright">© 2025 Jack Meersman. All rights reserved.</p>
+                <p class="copyright">© 2026 Jack Meersman. All rights reserved.</p>
             </div>
         </footer>
     </body>
