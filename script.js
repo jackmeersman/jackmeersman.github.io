@@ -1,13 +1,12 @@
 (() => {
   const root = document.documentElement;
-  const media = window.matchMedia("(prefers-color-scheme: dark)");
   const metas = document.querySelectorAll('meta[name="theme-color"]');
   const themeBtn = document.getElementById("theme-toggle");
   const menuBtn = document.getElementById("menu-toggle");
   const nav = document.getElementById("site-nav");
 
-  // Theme: explicit choice in localStorage wins, otherwise follow the system.
-  const effectiveTheme = () => root.dataset.theme || (media.matches ? "dark" : "light");
+  // Theme: use light by default and remember an explicit visitor choice.
+  const effectiveTheme = () => root.dataset.theme || "light";
 
   const paintTheme = () => {
     const dark = effectiveTheme() === "dark";
@@ -22,7 +21,6 @@
     paintTheme();
   });
 
-  media.addEventListener("change", paintTheme);
   paintTheme();
 
   // Mobile menu.
@@ -54,6 +52,25 @@
   window.matchMedia("(min-width: 1000px)").addEventListener("change", (e) => {
     if (e.matches) setMenu(false);
   });
+
+  // One focus synchronizes the A&M experience and project views.
+  // Without JavaScript all versions remain readable and the controls stay hidden.
+  const practiceButtons = document.querySelectorAll("[data-practice-select]");
+  const practicePanels = document.querySelectorAll("[data-practice-panel]");
+  const selectPractice = (practice) => {
+    practiceButtons.forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.practiceSelect === practice));
+    });
+    practicePanels.forEach((panel) => {
+      panel.hidden = panel.dataset.practicePanel !== practice;
+    });
+  };
+
+  practiceButtons.forEach((button) => {
+    button.addEventListener("click", () => selectPractice(button.dataset.practiceSelect));
+  });
+  selectPractice("response");
+  document.querySelectorAll(".practice-switch, .practice-help").forEach((group) => { group.hidden = false; });
 
   // Footer year.
   const year = document.getElementById("year");

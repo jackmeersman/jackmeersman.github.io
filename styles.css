@@ -55,22 +55,6 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --bg: #0a0a0a;
-    --bg-2: #111111;
-    --bg-3: #1c1c1c;
-    --fg: #ededed;
-    --fg-2: #a1a1a1;
-    --fg-3: #7d7d7d;
-    --line: #262626;
-    --line-2: #3a3a3a;
-    --accent: #52a8ff;
-    --logo-filter: grayscale(1) invert(1) contrast(1.05);
-  }
-}
-
 :root[data-theme="dark"] {
   color-scheme: dark;
   --bg: #0a0a0a;
@@ -112,8 +96,8 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.25;
   font-feature-settings: "cv11", "ss01";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -301,16 +285,6 @@ p {
   display: block;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .icon-sun {
-    display: none;
-  }
-
-  :root:not([data-theme="light"]) .icon-moon {
-    display: block;
-  }
-}
-
 .menu-btn {
   display: none;
 }
@@ -433,15 +407,15 @@ p {
 }
 
 .eyebrow {
-  font: 500 12px/1.4 var(--mono);
+  font: 500 13px/1.25 var(--mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-2);
 }
 
 .hero h1 {
-  margin-top: 16px;
-  font-size: clamp(2.125rem, 1.35rem + 3.6vw, 4rem);
+  margin-top: 12px;
+  font-size: clamp(2.25rem, 1.45rem + 3.8vw, 4.25rem);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.035em;
@@ -449,9 +423,9 @@ p {
 
 .lead {
   max-width: 58ch;
-  margin-top: 20px;
-  font-size: 17px;
-  line-height: 1.6;
+  margin-top: 12px;
+  font-size: 19px;
+  line-height: 1.25;
   color: var(--fg-2);
 }
 
@@ -486,16 +460,16 @@ p {
 }
 
 .stat dd {
-  font: 500 26px/1.1 var(--mono);
+  font: 500 28px/1.1 var(--mono);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.02em;
 }
 
 .stat dt {
   order: 1;
-  margin-top: 8px;
-  font-size: 13px;
-  line-height: 1.4;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.25;
   color: var(--fg-2);
 }
 
@@ -514,12 +488,12 @@ p {
   }
 
   .hero h1 {
-    margin-top: 20px;
+    margin-top: 14px;
   }
 
   .lead {
-    margin-top: 24px;
-    font-size: 18px;
+    margin-top: 14px;
+    font-size: 20px;
   }
 
   .actions {
@@ -540,7 +514,7 @@ p {
   }
 
   .stat dd {
-    font-size: 32px;
+    font-size: 34px;
   }
 }
 
@@ -564,18 +538,18 @@ p {
 }
 
 .section h2 {
-  margin-top: 10px;
-  font-size: 22px;
+  margin-top: 8px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
 
 .section-desc {
-  margin-top: 8px;
+  margin-top: 6px;
   max-width: 34ch;
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: 16px;
+  line-height: 1.25;
   color: var(--fg-2);
 }
 
@@ -597,7 +571,7 @@ p {
   }
 
   .section h2 {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 
@@ -611,7 +585,7 @@ p {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding-bottom: 16px;
+  padding-bottom: 12px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -632,21 +606,19 @@ p {
 }
 
 .firm-title h3 {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.2;
   letter-spacing: -0.015em;
 }
 
 .firm-title p {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--fg-2);
 }
 
 .role {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 6px 24px;
+  display: block;
   padding-block: 18px;
   border-bottom: 1px solid var(--line);
 }
@@ -665,29 +637,29 @@ p {
 }
 
 .role-body h4 {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.2;
   letter-spacing: -0.01em;
 }
 
 .role-note {
   margin-top: 2px;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--fg-2);
 }
 
 .bullets {
-  margin-top: 10px;
+  margin-top: 6px;
   display: grid;
-  gap: 8px;
+  gap: 7px;
 }
 
 .bullets li {
   position: relative;
   padding-left: 18px;
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: 17px;
+  line-height: 1.25;
   color: var(--fg-2);
 }
 
@@ -695,7 +667,7 @@ p {
   content: "";
   position: absolute;
   left: 2px;
-  top: 0.72em;
+  top: 0.6em;
   width: 6px;
   height: 1px;
   background: var(--fg-3);
@@ -703,7 +675,6 @@ p {
 
 @media (min-width: 800px) {
   .role {
-    grid-template-columns: 168px minmax(0, 1fr);
     padding-block: 22px;
   }
 
@@ -747,8 +718,8 @@ p {
 
 .cert-name {
   grid-area: name;
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 16px;
+  line-height: 1.25;
   color: var(--fg-2);
 }
 
@@ -791,21 +762,23 @@ p {
 }
 
 .skill-group h3 {
-  font: 500 12px/1.5 var(--mono);
+  font: 500 14px/1.25 var(--mono);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--fg);
 }
 
 .skill-group ul {
-  margin-top: 12px;
+  list-style: disc;
+  padding-left: 18px;
+  margin-top: 6px;
   display: grid;
   gap: 6px;
 }
 
 .skill-group li {
-  font-size: 14.5px;
-  line-height: 1.5;
+  font-size: 16.5px;
+  line-height: 1.25;
   color: var(--fg-2);
 }
 
@@ -852,7 +825,7 @@ p {
   align-items: center;
   gap: 6px;
   min-width: 0;
-  font-size: 15px;
+  font-size: 17px;
   overflow-wrap: anywhere;
   color: var(--fg);
 }
@@ -942,8 +915,135 @@ p {
 }
 
 /* Project case studies, training, and community entries. */
-.narrative h3 { font-size: 20px; line-height: 1.4; letter-spacing: -0.02em; }
-.narrative h4 { font-size: 15px; margin-top: 20px; }
-.narrative p:not(.eyebrow):not(.role-dates) { color: var(--fg-2); font-size: 15px; line-height: 1.65; margin-top: 10px; }
-.narrative .eyebrow { margin-bottom: 8px; }
+.narrative h3 { font-size: 22px; line-height: 1.2; letter-spacing: -0.02em; }
+.narrative h4 { font-size: 17px; margin-top: 14px; }
+.narrative p:not(.eyebrow):not(.role-dates) { color: var(--fg-2); font-size: 17px; line-height: 1.25; margin-top: 4px; }
+.narrative .eyebrow { margin-bottom: 6px; }
 .cert-name:hover { text-decoration: underline; }
+
+/* Shared practice selector for A&M experience and notable projects. */
+.practice-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.section-head .practice-switch {
+  margin-top: 20px;
+}
+
+.section-head .practice-help {
+  margin-bottom: 0;
+}
+
+.practice-switch[hidden], .practice-panel[hidden] {
+  display: none;
+}
+
+.practice-button {
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  color: var(--fg-2);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: background-color var(--fast) var(--ease), color var(--fast) var(--ease);
+}
+
+.practice-button:hover {
+  color: var(--fg);
+  background: var(--bg-3);
+}
+
+.practice-button[aria-pressed="true"] {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+.practice-help, .narrative .practice-help {
+  margin-block: 10px 24px;
+  font-size: 14px;
+  color: var(--fg-2);
+  line-height: 1.25;
+}
+
+.practice-heading, .narrative .practice-heading {
+  margin: 10px 0 12px;
+  color: var(--fg-2);
+  font: 500 13px/1.25 var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.role-body .practice-heading {
+  margin-bottom: 0;
+}
+
+.practice-panel:not([hidden]) + .practice-panel {
+  margin-top: 32px;
+}
+
+.narrative .project-title {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.narrative .project-label {
+  margin: 14px 0 0;
+  font-size: 17px;
+}
+
+@media print {
+  .practice-switch, .practice-help {
+    display: none;
+  }
+
+  .practice-panel[hidden] {
+    display: block;
+  }
+}
+
+/* Keep the degree designation beside its title at every viewport size. */
+.degree {
+  padding-block: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.degree h4 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* Role dates share a heading row; all achievements use the full column. */
+.role-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 16px;
+}
+
+.role-header h4 {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.role-header .role-dates {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Preserve a visible line for each blank experience bullet until it is filled in. */
+.bullets li:empty {
+  min-height: 1.25em;
+}

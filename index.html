@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Jack Meersman — Cyber Incident Response &amp; Digital Forensics</title>
-  <meta name="description" content="Jack Meersman is a cybersecurity manager at Alvarez &amp; Marsal specializing in incident response, digital forensics, forensic automation, cloud DFIR, and M&amp;A assessments. CISSP, GSP.">
+  <title>Jack Meersman — Cyber Incident Response &amp; M&amp;A Advisory</title>
+  <meta name="description" content="Jack Meersman is a cybersecurity manager at Alvarez &amp; Marsal specializing in incident response, digital forensics, technical M&amp;A diligence, and secure integration. CISSP, GSP.">
   <link rel="canonical" href="https://jackmeersman.dev/">
-  <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t)}}catch(e){}})();</script>
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0a">
+  <meta name="theme-color" content="#ffffff">
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);document.querySelector('meta[name="theme-color"]').content=t==="dark"?"#0a0a0a":"#ffffff"}}catch(e){}})();</script>
   <link rel="preload" href="fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
@@ -16,7 +15,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Jack Meersman">
-  <meta property="og:description" content="Cyber incident detection, response, and investigations. Forensic automation and cloud DFIR. Manager, Alvarez &amp; Marsal.">
+  <meta property="og:description" content="Cyber incident response and M&amp;A advisory. Technical diligence, secure integration, and forensic engineering. Manager, Alvarez &amp; Marsal.">
   <meta property="og:url" content="https://jackmeersman.dev/">
   <meta property="og:image" content="https://jackmeersman.dev/images/og.png">
   <meta property="og:image:width" content="1200">
@@ -76,9 +75,9 @@
   <main class="frame" id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">Cybersecurity · Incident Response &amp; Digital Forensics</p>
-        <h1 id="hero-title">Cyber incident detection, response &amp; investigations.</h1>
-        <p class="lead">I’m Jack Meersman, a Manager in Alvarez&nbsp;&amp;&nbsp;Marsal’s Global Cyber Risk Services practice. I lead cyber incident response and forensic investigations, with a passion for building systems that increase the speed to impact for my clients.</p>
+        <p class="eyebrow">Cybersecurity · Incident Detection and Response · M&amp;A Due Diligence and Transaction Advisory</p>
+        <h1 id="hero-title">Cyber incident response and M&amp;A advisory.</h1>
+        <p class="lead">I’m Jack Meersman, a Manager in Alvarez&nbsp;&amp;&nbsp;Marsal’s Global Cyber Risk Services practice. I lead cyber incident response and forensic investigations, advise on technical diligence and secure integration for M&amp;A, and build systems that accelerate findings and support client decisions.</p>
         <p class="role-note">Savannah, GA · CISSP, GSP</p>
         <div class="actions">
           <a class="btn btn-primary" href="mailto:jackmeersman@gmail.com">Email Jack</a>
@@ -94,9 +93,9 @@
         </picture>
       </figure>
       <dl class="stats" aria-label="Career at a glance">
-        <div class="stat"><dt>In cyber consulting since</dt><dd>2019</dd></div>
+        <div class="stat"><dt>M&amp;A transactions advised</dt><dd>120+</dd></div>
         <div class="stat"><dt>IR &amp; forensic investigations led</dt><dd>80+</dd></div>
-        <div class="stat"><dt>Professional certifications</dt><dd>8</dd></div>
+        <div class="stat"><dt>In cyber consulting since</dt><dd>2019</dd></div>
       </dl>
     </section>
 
@@ -104,7 +103,13 @@
       <header class="section-head">
         <p class="section-num" aria-hidden="true">01</p>
         <h2 id="experience-title">Professional Experience</h2>
-        <p class="section-desc">Cybersecurity consulting since 2019 across two global firms, from cyber threat management to leading incident response engagements.</p>
+        <p class="section-desc">Cybersecurity consulting since 2019 across two global firms, spanning incident response, technical diligence, and secure integration.</p>
+          <div class="practice-switch" role="group" aria-label="Alvarez &amp; Marsal experience focus" hidden>
+            <button class="practice-button" type="button" data-practice-select="response" aria-pressed="true" aria-controls="am-response projects-response">Detection &amp; Response</button>
+            <button class="practice-button" type="button" data-practice-select="ma" aria-pressed="false" aria-controls="am-ma projects-ma">Cyber M&amp;A</button>
+            <button class="practice-button" type="button" data-practice-select="field" aria-pressed="false" aria-controls="am-field projects-field">Field Engineering</button>
+          </div>
+          <p class="practice-help" hidden>Choose a focus to explore my A&amp;M experience and notable projects.</p>
       </header>
       <div class="section-body">
         <article class="firm">
@@ -116,24 +121,52 @@
             </div>
           </div>
           <div class="role">
-            <p class="role-dates"><time datetime="2023-11">Nov 2023</time> — Present</p>
             <div class="role-body">
-              <h4>Manager</h4>
-              <ul class="bullets">
-                        <li>Led 80+ cyber incident response and forensic investigations, directing analysts, performing hands-on analysis, communicating findings, authoring final forensic reports, and managing the engagement lifecycle.</li>
-                        <li>Replaced manual forensic artifact extraction and analysis with automated pipelines, shortening time to findings and reducing engagement costs.</li>
-                        <li>Built multi-agent workflows to analyze forensic data, generate incident timelines, and queue flagged findings for analyst review.</li>
-                        <li>Rearchitected the U.S. on-premises forensic lab into a hybrid Azure and Proxmox environment with custom forensic images, individual analyst VMs, and shared ZFS storage.</li>
-                        <li>Designed and built an interactive tabletop exercise platform with a client portal, facilitator-controlled evidence releases, and branching scenarios for executive and technical incident response exercises.</li>
-                        <li>Assessed acquisition targets’ cybersecurity risks and remediation costs to inform buyer decisions and post-acquisition security priorities.</li>
-                        <li>Modeled cybersecurity cost adjustments for carve-out transactions and advised divested businesses on security controls from signing through post-close operations.</li>
-                    </ul>
+              <div class="role-header">
+                <h4>Manager</h4>
+                <p class="role-dates"><time datetime="2023-11">Nov 2023</time> — Present</p>
+              </div>
+              <div class="practice-panel" id="am-response" data-practice-panel="response" aria-labelledby="am-response-title">
+                <h5 class="practice-heading" id="am-response-title">Detection &amp; Response Experience</h5>
+                <ul class="bullets">
+                  <li>Led 80+ cyber incident response and forensic investigations, directing analysts, performing hands-on analysis, communicating findings, authoring final forensic reports, and managing the engagement lifecycle.</li>
+                  <li>Replaced manual forensic artifact extraction and analysis with automated pipelines, shortening time to findings and reducing engagement costs.</li>
+                  <li>Built multi-agent workflows to analyze forensic data, generate incident timelines, and queue flagged findings for analyst review.</li>
+                  <li>Rearchitected the U.S. on-premises forensic lab into a hybrid Azure and Proxmox environment with custom forensic images, individual analyst VMs, and shared ZFS storage.</li>
+                  <li>Designed and built an interactive tabletop exercise platform with a client portal, facilitator-controlled evidence releases, and branching scenarios for executive and technical incident response exercises.</li>
+                </ul>
+              </div>
+              <div class="practice-panel" id="am-ma" data-practice-panel="ma" aria-labelledby="am-ma-title">
+                <h5 class="practice-heading" id="am-ma-title">Cyber M&amp;A Experience</h5>
+                <ul class="bullets">
+                  <li>Led M&amp;A cyber advisory on 120+ transactions for private equity and S&amp;P 100 clients, including FAANG, across financial services, healthcare, biotechnology, and heavy industry and manufacturing.</li>
+                  <li>Led diligence across governance, risk and compliance, identity and access management, infrastructure, endpoint and application security, vulnerability management, secure development, incident response, and third-party risk.</li>
+                  <li>Assessed transaction units’ multi-cloud infrastructure and products through hands-on analysis, source code review, and penetration testing.</li>
+                  <li>Presented prioritized risks to C-suite executives, deal teams, and legal counsel, shaping deal terms and sign-to-close conditions.</li>
+                  <li>Standardized A&amp;M’s cybersecurity due diligence process with quantitative risk scoring and reporting templates.</li>
+                  <li>Built Day 1 readiness plans and 100-day integration roadmaps spanning identity consolidation, network connectivity, and security tooling alignment, carrying diligence findings through to post-close remediation.</li>
+                  <li>Assessed acquisition targets’ cybersecurity risks and remediation costs to inform buyer decisions and post-acquisition security priorities.</li>
+                  <li>Modeled cybersecurity cost adjustments for carve-out transactions and advised divested businesses on security controls from signing through post-close operations.</li>
+                </ul>
+              </div>
+              <div class="practice-panel" id="am-field" data-practice-panel="field" aria-labelledby="am-field-title">
+                <h5 class="practice-heading" id="am-field-title">Field Engineering Experience</h5>
+                <ul class="bullets">
+                  <li>Led a multi-phase DevSecOps implementation engagement for a U.S. automobile financing firm, covering 61 internal and external applications. The implementation included a pilot migration of CI/CD pipelines from Azure DevOps to GitHub, development of 6-, 12-, and 18-month plans for scaling the migration beyond the pilot, and integration of GitHub Advanced Security, Actions, and Dependabot into the new CI/CD pipelines.</li>
+                  <li>Advised enterprise security leaders, architects, and engineering teams on software product and AI security posture, translating technical findings into actionable architecture decisions and prioritized remediation plans.</li>
+                  <li>Conducted technical security assessments across all three cloud hyperscalers and Microsoft 365, evaluating identity, network exposure, data protection, and detection capabilities to identify risks affecting enterprise adoption and operations.</li>
+                  <li>Collaborated with client detection engineering teams to design and implement over 150 incident detection rules as part of post-breach remediation.</li>
+                  <li>Designed secure architecture approaches for complex carve-outs spanning IT and OT environments, applying identity-first access and network segmentation principles to support separation, operational continuity, and transition planning through the TSA/rTSA period.</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="role">
-            <p class="role-dates"><time datetime="2023-02">Feb 2023</time> — <time datetime="2023-11">Nov 2023</time></p>
             <div class="role-body">
-              <h4>Senior Associate</h4>
+              <div class="role-header">
+                <h4>Senior Associate</h4>
+                <p class="role-dates"><time datetime="2023-02">Feb 2023</time> — <time datetime="2023-11">Nov 2023</time></p>
+              </div>
             </div>
           </div>
         </article>
@@ -147,9 +180,11 @@
             </div>
           </div>
           <div class="role">
-            <p class="role-dates"><time datetime="2021-10">Oct 2021</time> — <time datetime="2023-01">Jan 2023</time></p>
             <div class="role-body">
-              <h4>Senior Associate, Cyber Threat Management</h4>
+              <div class="role-header">
+                <h4>Senior Associate, Cyber Threat Management</h4>
+                <p class="role-dates"><time datetime="2021-10">Oct 2021</time> — <time datetime="2023-01">Jan 2023</time></p>
+              </div>
               <ul class="bullets">
                         <li>Served as engagement lead for cloud incident response matters.</li>
                         <li>Conducted on-premises imaging of client IT systems for forensic analysis.</li>
@@ -158,9 +193,11 @@
             </div>
           </div>
           <div class="role">
-            <p class="role-dates"><time datetime="2019-07">Jul 2019</time> — <time datetime="2021-10">Oct 2021</time></p>
             <div class="role-body">
-              <h4>Associate, Cyber Threat Management</h4>
+              <div class="role-header">
+                <h4>Associate, Cyber Threat Management</h4>
+                <p class="role-dates"><time datetime="2019-07">Jul 2019</time> — <time datetime="2021-10">Oct 2021</time></p>
+              </div>
             </div>
           </div>
         </article>
@@ -171,27 +208,48 @@
       <header class="section-head">
         <p class="section-num" aria-hidden="true">02</p>
         <h2 id="projects-title">Notable Projects</h2>
-        <p class="section-desc">Building platforms that shorten time to findings and make assessments repeatable.</p>
+        <p class="section-desc">Building platforms that accelerate investigations, assess acquisition risks, and support decisions during live transactions.</p>
+          <div class="practice-switch" role="group" aria-label="Notable projects focus" hidden>
+            <button class="practice-button" type="button" data-practice-select="response" aria-pressed="true" aria-controls="am-response projects-response">Detection &amp; Response</button>
+            <button class="practice-button" type="button" data-practice-select="ma" aria-pressed="false" aria-controls="am-ma projects-ma">Cyber M&amp;A</button>
+            <button class="practice-button" type="button" data-practice-select="field" aria-pressed="false" aria-controls="am-field projects-field">Field Engineering</button>
+          </div>
+        <p class="practice-help" hidden>The selected focus also updates my A&amp;M experience above.</p>
       </header>
       <div class="section-body narrative">
-            <article class="firm">
+        <div class="practice-panel" id="projects-response" data-practice-panel="response" aria-label="Detection &amp; Response projects">
+          <article class="firm">
                 <p class="eyebrow">Lead Architect and Developer</p>
-                <h3>Cloud Incident Response Platform</h3>
+                <h4 class="project-title">Cloud Incident Response Platform</h4>
                 <p>Cloud incident response at A&amp;M relied on largely manual, ad-hoc processes for collecting, analyzing, and reporting on compromised cloud resources.</p>
-                <h4>Contribution</h4>
+                <h5 class="project-label">Contribution</h5>
                 <p>I designed and built a Terraform-based cloud DFIR platform across AWS, Azure, and Google Cloud, standardizing infrastructure deployment and investigative workflows. I integrated case-level cost tracking for client billing and worked with business stakeholders to audit and approve the infrastructure for client matters.</p>
-                <h4>Result</h4>
+                <h5 class="project-label">Result</h5>
                 <p>The DFIR team can deploy forensic infrastructure in any client’s cloud operating region in under 30 minutes, with tracking and reporting that attributes cloud costs to individual matters. This materially shortened the time required to deliver findings.</p>
             </article>
-            <article class="firm">
+        </div>
+        <div class="practice-panel" id="projects-ma" data-practice-panel="ma" aria-label="Cyber M&amp;A projects">
+          <article class="firm">
                 <p class="eyebrow">Lead Developer</p>
-                <h3>Microsoft 365 Compromise Assessment Tool for M&amp;A</h3>
+                <h4 class="project-title">Microsoft 365 Compromise Assessment Tool for M&amp;A</h4>
                 <p>Acquisition deadlines left little time for manual assessments of target Microsoft 365 tenants for compromise indicators and high-risk configuration gaps.</p>
-                <h4>Contribution</h4>
+                <h5 class="project-label">Contribution</h5>
                 <p>I built a tool using Microsoft Graph API to automate assessments of tenant architecture, security controls, and historical audit activity. I evolved deployment from individual app registrations to an enterprise application authorized through target-tenant consent.</p>
-                <h4>Result</h4>
+                <h5 class="project-label">Result</h5>
                 <p>Automated collection and analysis enabled repeatable tenant assessments under tight transaction deadlines and provided a clearer basis for identifying compromise indicators and configuration risks before integration.</p>
             </article>
+        </div>
+        <div class="practice-panel" id="projects-field" data-practice-panel="field" aria-label="Field Engineering projects">
+          <article class="firm">
+              <p class="eyebrow">Lead Architect and Developer</p>
+              <h4 class="project-title">Sensitive Data Discovery Platform</h4>
+              <p>During a private equity client’s portfolio-company sale, a phishing incident compromised a deal team member’s credentials and exposed 100,000+ transaction and business documents. Legal counsel needed to understand the contents of the exposed data during an active deal.</p>
+              <h5 class="project-label">Contribution</h5>
+              <p>I architected, developed, tested, and deployed an end-to-end discovery pipeline combining automated preprocessing, local LLMs, and Microsoft Foundry models to analyze document contents and deliver findings to legal counsel, while keeping sensitive client data within locally controlled infrastructure.</p>
+              <h5 class="project-label">Result</h5>
+              <p>The platform supported counsel’s assessment of sensitive data exposure during the sale and directly generated an additional $350,000 in revenue for our team.</p>
+            </article>
+        </div>
       </div>
     </section>
 
@@ -273,10 +331,21 @@
       <header class="section-head">
         <p class="section-num" aria-hidden="true">05</p>
         <h2 id="skills-title">Technical Skills</h2>
-        <p class="section-desc">Hands-on tools and platforms for endpoint and cloud investigations, application security, infrastructure, analytics, and AI-assisted workflows.</p>
+        <p class="section-desc">Technical depth across cyber M&amp;A, endpoint and cloud investigations, application security, infrastructure, analytics, and AI-assisted workflows.</p>
       </header>
       <div class="section-body">
         <div class="skill-grid">
+            <div class="skill-group">
+                <h3>Cyber M&amp;A &amp; Secure Integration</h3>
+                <ul>
+                    <li>Buy-side security due diligence</li>
+                    <li>Sell-side readiness, data room support, and pre-sign enhancements</li>
+                    <li>Day 1 readiness and 100-day integration planning</li>
+                    <li>Carve-out security requirements and standalone operating models</li>
+                    <li>Transition and reverse transition service agreement (TSA/rTSA) scoping and service schedules</li>
+                    <li>Cyber cost modeling and quantitative risk scoring</li>
+                </ul>
+            </div>
             <div class="skill-group">
                 <h3>Endpoint and Cloud DFIR</h3>
                 <ul>
@@ -313,11 +382,12 @@
                 </ul>
             </div>
             <div class="skill-group">
-                <h3>AI Platforms &amp; Investigation Workflows</h3>
+                <h3>AI Platforms &amp; Security Workflows</h3>
                 <ul>
                     <li>Codex and Claude Code</li>
                     <li>OpenCode with local models</li>
                     <li>Agentic detection, response, and investigation workflows</li>
+                    <li>Agentic product security diligence and testing workflows</li>
                 </ul>
             </div>
         </div>
@@ -339,19 +409,13 @@
               <p>Class of 2019</p>
             </div>
           </div>
-          <div class="role">
-            <p class="role-dates">B.S.</p>
-            <div class="role-body">
-              <h4>Computer Science</h4>
-              <p class="role-note">Areas of emphasis: Cybersecurity, Distributed Systems</p>
-              <p class="role-note">Undergraduate Teaching Assistant, UGA School of Computing</p>
-            </div>
+          <div class="degree">
+            <h4>B.S. Computer Science</h4>
+            <p class="role-note">Areas of emphasis: Cybersecurity, Distributed Systems</p>
+            <p class="role-note">Undergraduate Teaching Assistant, UGA School of Computing</p>
           </div>
-          <div class="role">
-            <p class="role-dates">B.S.</p>
-            <div class="role-body">
-              <h4>Biochemistry &amp; Molecular Biology</h4>
-            </div>
+          <div class="degree">
+            <h4>B.S. Biochemistry &amp; Molecular Biology</h4>
           </div>
         </article>
       </div>
